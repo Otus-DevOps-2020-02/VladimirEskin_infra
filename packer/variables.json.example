@@ -1,0 +1,5 @@
+{
+  "project_id": "demo",
+  "source_image_family": "oldschool",
+  "machine_type": "eniac"
+}
