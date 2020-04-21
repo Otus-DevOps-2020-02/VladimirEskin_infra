@@ -17,7 +17,7 @@ resource "google_compute_instance" "app" {
     }
   }
   metadata = {
-      ssh-keys = "vesk:${file("root/Users/ves/.ssh/vesk.pub")}"
+      ssh-keys = "vesk:${file("~/Users/ves/.ssh/vesk.pub")}"
   }
   network_interface {
     network = "default"
@@ -28,7 +28,7 @@ resource "google_compute_instance" "app" {
       host = self.network_interface[0].access_config[0].nat_ip
       user  = "vesk"
       agent = false
-      private_key = file("root/Users/ves/.ssh/vesk")
+      private_key = file("~/Users/ves/.ssh/vesk")
   }
   provisioner "file" {
       source = "terraform/files/puma.service"
