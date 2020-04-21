@@ -17,7 +17,7 @@ resource "google_compute_instance" "app" {
     }
   }
   metadata = {
-      ssh-keys = "vesk:${file("~/.ssh/vesk.pub")}"
+      ssh-keys = "vesk:${file("~/Users/ves/.ssh/vesk.pub")}"
   }
   network_interface {
     network = "default"
