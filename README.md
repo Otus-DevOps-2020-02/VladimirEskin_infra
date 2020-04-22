@@ -8,3 +8,4 @@ someinternalhost_IP=10.132.0.2
 testapp_IP = 35.246.94.44
 testapp_port = 9292
 Создан шаблон packer(ubuntu16.json) для создания образа reddit(+ruby+mongodb)
+Выполнено задание terraform-1
