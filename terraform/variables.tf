@@ -13,3 +13,6 @@ variable public_key_path {
 variable disk_image {
   description = "reddit-base-1585553621"
 }
+variable private_key_path {
+  description = "~/Users/ves/.ssh/vesk"
+}
