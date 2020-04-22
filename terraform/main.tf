@@ -3,8 +3,8 @@ terraform {
 }
 provider "google" {
 version = "2.15"
-project = "infra-271213"
-region = "europe-west-1"
+project = var.project
+region = var.region
 }
 resource "google_compute_instance" "app" {
   name = "reddit-app"
@@ -13,11 +13,11 @@ resource "google_compute_instance" "app" {
   tags = ["reddit-app"]
   boot_disk {
     initialize_params {
-      image = "reddit-base-1585553621"
+      image = var.disk_image
     }
   }
   metadata = {
-      ssh-keys = "vesk:${file("~/Users/ves/.ssh/vesk.pub")}"
+      ssh-keys = "vesk:${file(var.public_key_path)}"
   }
   network_interface {
     network = "default"

@@ -1,5 +1,5 @@
 variable project {
-  description = "Project ID"
+  description = "infra-271213"
 }
 variable region {
   description = "Region"
@@ -8,8 +8,8 @@ variable region {
 }
 variable public_key_path {
   # Описание переменной
-  description = "Path to the public key used for ssh access"
+  description = "~/Users/ves/.ssh/vesk.pub"
 }
 variable disk_image {
-  description = "Disk image"
+  description = "reddit-base-1585553621"
 }
