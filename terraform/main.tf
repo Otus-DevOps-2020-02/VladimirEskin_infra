@@ -28,7 +28,7 @@ resource "google_compute_instance" "app" {
       host = self.network_interface[0].access_config[0].nat_ip
       user  = "vesk"
       agent = false
-      private_key = file("~/Users/ves/.ssh/vesk")
+      private_key = "vesk:${file(var.private_key_path)}"
   }
   provisioner "file" {
       source = "terraform/files/puma.service"
